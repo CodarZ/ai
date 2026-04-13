@@ -1,0 +1,44 @@
+node_modules
+
+# Python相关
+*.py[cod]
+*.pyo
+*.so
+__pycache__/
+.pytest_cache/
+
+# 虚拟环境
+venv/
+.venv/
+
+# IDE/编辑器
+.idea/
+*.swp
+.vscode/**
+!.vscode/mcp.json
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/extensions.json
+*.sublime-project
+*.sublime-workspace
+
+# 日志文件
+log
+logs
+*.log
+*.out
+*.err
+
+# 环境文件
+# env
+
+# 本地配置文件
+*.local
+*.discard
+
+# 临时文件
+._*
+.DS_Store
+*.bak
+*.tmp
+temp/
