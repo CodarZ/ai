@@ -1,0 +1,80 @@
+{
+  "project": "",
+  "project_state": "existing | partial | missing | idea-only",
+  "confidence_summary": {
+    "overall": "high | medium | low",
+    "reason": ""
+  },
+  "evidence": {
+    "sources": [
+      {
+        "type": "css_variables | theme_file | screenshot | website_rendered | storybook | figma | readme | prd",
+        "path": "",
+        "confidence": "verified | inferred | assumed"
+      }
+    ],
+    "colors": [
+      {
+        "token": "",
+        "value": "",
+        "source": "",
+        "confidence": "verified | inferred | assumed"
+      }
+    ],
+    "typography": [
+      {
+        "token": "",
+        "value": {
+          "fontFamily": "",
+          "fontSize": "",
+          "fontWeight": "",
+          "lineHeight": ""
+        },
+        "source": "",
+        "confidence": "verified | inferred | assumed"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "",
+        "value": "",
+        "source": "",
+        "confidence": "verified | inferred | assumed"
+      }
+    ],
+    "rounded": [
+      {
+        "token": "",
+        "value": "",
+        "source": "",
+        "confidence": "verified | inferred | assumed"
+      }
+    ],
+    "components": [
+      {
+        "name": "",
+        "observed_behavior": "",
+        "source": "",
+        "confidence": "verified | inferred | assumed"
+      }
+    ],
+    "layout": [
+      {
+        "pattern": "",
+        "source": "",
+        "confidence": "verified | inferred | assumed"
+      }
+    ],
+    "accessibility": [
+      {
+        "pattern": "",
+        "source": "",
+        "confidence": "verified | inferred | assumed"
+      }
+    ]
+  },
+  "inferences": [],
+  "assumptions": [],
+  "missing_information": [],
+  "recommended_next_steps": []
+}

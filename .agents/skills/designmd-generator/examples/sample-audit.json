@@ -1,0 +1,189 @@
+{
+  "project": "Atlas Billing",
+  "project_state": "partial",
+  "confidence_summary": {
+    "overall": "medium",
+    "reason": "Colors and radius are verified from CSS variables; typography is partially inferred from theme files and screenshots; some component variants are missing. Label typography is inferred from rendered output, not directly from source."
+  },
+  "evidence": {
+    "sources": [
+      {
+        "type": "css_variables",
+        "path": "./src/styles/globals.css",
+        "confidence": "verified"
+      },
+      {
+        "type": "theme_file",
+        "path": "./src/theme.ts",
+        "confidence": "verified"
+      },
+      {
+        "type": "screenshot",
+        "path": "./artifacts/home.png",
+        "confidence": "verified"
+      },
+      {
+        "type": "screenshot",
+        "path": "./artifacts/billing.png",
+        "confidence": "verified"
+      }
+    ],
+    "colors": [
+      {
+        "token": "primary",
+        "value": "#2563eb",
+        "source": "./src/styles/globals.css",
+        "confidence": "verified"
+      },
+      {
+        "token": "secondary",
+        "value": "#64748b",
+        "source": "./src/styles/globals.css",
+        "confidence": "verified"
+      },
+      {
+        "token": "background",
+        "value": "#ffffff",
+        "source": "./src/styles/globals.css",
+        "confidence": "verified"
+      },
+      {
+        "token": "surface",
+        "value": "#f8fafc",
+        "source": "./src/styles/globals.css",
+        "confidence": "verified"
+      },
+      {
+        "token": "text",
+        "value": "#0f172a",
+        "source": "./src/styles/globals.css",
+        "confidence": "verified"
+      }
+    ],
+    "typography": [
+      {
+        "token": "body",
+        "value": {
+          "fontFamily": "Inter",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "1.5"
+        },
+        "source": "./src/theme.ts",
+        "confidence": "inferred"
+      },
+      {
+        "token": "label",
+        "value": {
+          "fontFamily": "Inter",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "lineHeight": "1.4",
+          "letterSpacing": "0.01em"
+        },
+        "source": "./artifacts/home.png",
+        "confidence": "inferred"
+      }
+    ],
+    "spacing": [
+      {
+        "token": "xs",
+        "value": "4px",
+        "source": "./tailwind.config.ts",
+        "confidence": "verified"
+      },
+      {
+        "token": "sm",
+        "value": "8px",
+        "source": "./tailwind.config.ts",
+        "confidence": "verified"
+      },
+      {
+        "token": "md",
+        "value": "16px",
+        "source": "./tailwind.config.ts",
+        "confidence": "verified"
+      },
+      {
+        "token": "lg",
+        "value": "24px",
+        "source": "./tailwind.config.ts",
+        "confidence": "verified"
+      }
+    ],
+    "rounded": [
+      {
+        "token": "sm",
+        "value": "4px",
+        "source": "./src/styles/globals.css",
+        "confidence": "verified"
+      },
+      {
+        "token": "md",
+        "value": "8px",
+        "source": "./src/styles/globals.css",
+        "confidence": "verified"
+      },
+      {
+        "token": "lg",
+        "value": "12px",
+        "source": "./src/styles/globals.css",
+        "confidence": "verified"
+      }
+    ],
+    "components": [
+      {
+        "name": "button-primary",
+        "observed_behavior": "Solid primary button with white text and medium radius.",
+        "source": "./artifacts/home.png",
+        "confidence": "inferred"
+      },
+      {
+        "name": "card",
+        "observed_behavior": "Surface-colored container with large radius and generous padding. Used for invoice summaries, usage charts, plan comparison panels.",
+        "source": "./artifacts/billing.png",
+        "confidence": "inferred"
+      }
+    ],
+    "layout": [
+      {
+        "pattern": "Two-column page shell with a sticky left nav and scrollable content area.",
+        "source": "./artifacts/billing.png",
+        "confidence": "inferred"
+      },
+      {
+        "pattern": "Content max width ~960px for main panels.",
+        "source": "./artifacts/billing.png",
+        "confidence": "inferred"
+      }
+    ],
+    "accessibility": [
+      {
+        "pattern": "Visible focus states appear in screenshots, but keyboard support is not verified from code.",
+        "source": "./artifacts/home.png",
+        "confidence": "assumed"
+      }
+    ]
+  },
+  "inferences": [
+    "Use a restrained SaaS palette with one dominant primary accent.",
+    "Keep the interface dense enough for finance workflows without becoming cramped.",
+    "Inter is the primary body font based on theme file and screenshot evidence."
+  ],
+  "assumptions": [
+    "Inter is the primary body font because it appears in the theme and screenshots, but the exact fallback stack is not fully verified.",
+    "Label typography (14px/500) is inferred from rendered nav links and button labels, not from explicit theme configuration."
+  ],
+  "missing_information": [
+    "Verified component variants for plan cards, tables, and empty states are missing.",
+    "Motion and elevation tokens are not explicitly declared in the repository.",
+    "Hover and active states for buttons and links are not documented.",
+    "Dark mode support status is unknown."
+  ],
+  "recommended_next_steps": [
+    "Inspect the table component source for spacing and hover states.",
+    "Confirm whether dark mode is supported before finalizing color contrast tokens.",
+    "Add explicit motion tokens if animations are part of the product experience.",
+    "Verify the exact Inter fallback stack by inspecting computed styles."
+  ]
+}
